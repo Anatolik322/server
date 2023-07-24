@@ -8,6 +8,8 @@ let server = http.createServer((req, res) => {
         fs.createReadStream('./teamplates/main.html').pipe(res)
     }else if(req.url == '/about'){
         fs.createReadStream('./teamplates/about.html').pipe(res)
+    }else{
+        fs.createReadStream('./teamplates/error.html').pipe(res)
     }
 })
 
